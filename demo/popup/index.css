@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+}
+
+h3 {
+    margin: 50px;
+}
+
+.header {
+    background-color: black;
+    padding: 10px;
+}
+
+.gsLogo {
+    width: 21%;
+    margin-left: 10px;
+    vertical-align: middle;
+    border-style: none;
+}
