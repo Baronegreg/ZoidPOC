@@ -1,8 +1,6 @@
 <head>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css"
-  />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css" />
   <link rel="stylesheet" href="./index.css" />
   <script src="./zoid.js"></script>
   <!-- <script src="../../dist/login-zoid-component.frame.js"></script> -->
@@ -10,19 +8,14 @@
 
 <body>
   <div class="header">
-    <img
-      class="gsLogo"
-      src="gsLogo.png"
-      alt="GameSense Sports"
-      title="GameSense Sports"
-    />
+    <img class="gsLogo" src="gsLogo.png" alt="GameSense Sports" title="GameSense Sports" />
   </div>
 
   <h3>Demo Page</h3>
 
   <!-- Container for our zoid component to render into -->
 
-  <!-- <div id="container"></div> -->
+  <div id="container"></div>
 
   <br />
 
@@ -31,12 +24,16 @@
   <!-- Container to display the result of the login call -->
 
   <script>
-    // var CoachReport = zoid.create({
-    //   tag: "coach-report",
-    //   url: "http://localhost:3000/XDomain/CoachReport/"
-    // });
+    var CoachReport = zoid.create({
+      tag: "coach-report",
+      url: "http://localhost:3000/XDomain/CoachReport/",
+      dimensions: {
+        width: '500px',
+        height: '250px'
+      }
+    });
 
-    // CoachReport().render("#container");
+    CoachReport().render("#container");
 
     var CoachReport2 = zoid.create({
       tag: "coach-report2",
@@ -44,5 +41,6 @@
     });
 
     CoachReport2().render("#container2");
+
   </script>
 </body>
