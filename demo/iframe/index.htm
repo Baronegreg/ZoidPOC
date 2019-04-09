@@ -1,47 +1,48 @@
 <head>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css" />
-    <link rel="stylesheet" href="./index.css" />
-
-    <script src="../../dist/login-zoid-component.frame.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css"
+  />
+  <link rel="stylesheet" href="./index.css" />
+  <script src="./zoid.js"></script>
+  <!-- <script src="../../dist/login-zoid-component.frame.js"></script> -->
 </head>
 
 <body>
+  <div class="header">
+    <img
+      class="gsLogo"
+      src="gsLogo.png"
+      alt="GameSense Sports"
+      title="GameSense Sports"
+    />
+  </div>
 
-    <div class="header">
-        <img class="gsLogo" src='gsLogo.png' alt="GameSense Sports" title="GameSense Sports" />
-    </div>
+  <h3>Demo Page</h3>
 
-    <h3>Log in</h3>
+  <!-- Container for our zoid component to render into -->
 
-    <!-- Container for our zoid component to render into -->
+  <!-- <div id="container"></div> -->
 
-    <div id="container"></div>
+  <br />
 
-    <!-- Container to display the result of the login call -->
+  <div id="container2"></div>
 
-    <div id="result"></div>
+  <!-- Container to display the result of the login call -->
 
-    <script>
-        // Render the component and pass down props to the iframe
+  <script>
+    // var CoachReport = zoid.create({
+    //   tag: "coach-report",
+    //   url: "http://localhost:3000/XDomain/CoachReport/"
+    // });
 
-        zoidlogin.LoginZoidComponent({
+    // CoachReport().render("#container");
 
-            env: 'demo',
+    var CoachReport2 = zoid.create({
+      tag: "coach-report2",
+      url: "http://localhost:3000/XDomain/CoachReport2/"
+    });
 
-            prefilledEmail: 'foo@bar.com',
-
-            // When the iframe window calls `window.xprops.onLogin(email)` this callback will be called
-
-            onLogin: function (email) {
-
-                // Display the email address that was used to log in
-
-                document.querySelector('#result').innerText = email + ' logged in!';
-            }
-
-        }).render('#container');
-
-    </script>
-
+    CoachReport2().render("#container2");
+  </script>
 </body>
