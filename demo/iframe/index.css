@@ -6,6 +6,11 @@ h3 {
     margin: 50px;
 }
 
+.body {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .header {
     background-color: black;
     padding: 10px;

@@ -22,11 +22,11 @@
 
   <!-- Container for our zoid component to render into -->
 
-  <div id="container"></div>
+  <div class="body">
+    <div id="container"></div>
 
-  <br />
-
-  <div id="container2"></div>
+    <div id="container2"></div>
+  </div>
 
   <!-- Container to display the result of the login call -->
 
@@ -44,7 +44,11 @@
 
     var CoachReport2 = zoid.create({
       tag: "coach-report2",
-      url: "http://localhost:3000/XDomain/CoachReport2/"
+      url: "http://localhost:3000/XDomain/CoachReport2/",
+      dimensions: {
+        width: "500px",
+        height: "250px"
+      }
     });
 
     CoachReport2().render("#container2");
